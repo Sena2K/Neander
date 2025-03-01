@@ -4,8 +4,8 @@ TARGET = memory_program
 
 all: $(TARGET)
 
-$(TARGET): main.c
-	$(CC) $(CFLAGS) -o $(TARGET) main.c
+$(TARGET): neander.c
+	$(CC) $(CFLAGS) -o $(TARGET) neander.c
 
 run: $(TARGET)
 	./$(TARGET)

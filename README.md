@@ -17,4 +17,4 @@
 5. Se desejar limpar os arquivos compilados, use o comando:
 
    ```bash
-make clean
+    make clean
