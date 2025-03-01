@@ -7,24 +7,24 @@
 #define LINE_SIZE 16
 #define HEADER_SIZE 4
 
-void print_memory(uint8_t *bytes, int size) {
-  size_t offset = 0;
+void print_memory(uint8_t *bytes, size_t size) {
+    size_t offset = 0;
   
-
-  while (offset < size) {
-    printf("%08zx: ", offset);
-
-    for (size_t i = 0; i < LINE_SIZE; i++) {
-      if (offset + i < size)
-        printf("%02x ", bytes[offset + i]);
-      else
-        printf("   ");
+    while (offset < size) {
+      printf("%08zx: ", offset);
+  
+      for (size_t i = 0; i < LINE_SIZE; i++) {
+        if (offset + i < size)
+          printf("%02x ", bytes[offset + i]);
+        else
+          printf("   ");
+      }
+  
+      printf("\n");
+      offset += LINE_SIZE;
     }
-
-    printf("\n");
-    offset += LINE_SIZE;
   }
-}
+  
 
 int main() {
   uint8_t ac = 0, pc = 0;
