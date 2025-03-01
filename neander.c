@@ -43,9 +43,7 @@ int main() {
   const uint8_t expectedHeader[] = {0x03, 0x4E, 0x44, 0x52};
 
   if (memcmp(fileHeader, expectedHeader, HEADER_SIZE) != 0) {
-    fprintf(stderr, "Invalid header! Expected: %02x %02x %02x %02x, Found: %02x %02x %02x %02x\n", 
-        expectedHeader[0], expectedHeader[1], expectedHeader[2], expectedHeader[3],
-        fileHeader[0], fileHeader[1], fileHeader[2], fileHeader[3]);
+    printf("Wrong headers!");
     fclose(file);
     return 1;
 }
